@@ -1,8 +1,8 @@
 <template>
   <div>
-  <button @click="goNewPage">打开页面1</button>
-  <button @click="goPageTwo">打开页面2</button>
-  <div id="container"></div>
+  <button @click="goNewPage">旋转正方体</button>
+  <button @click="goPageTwo">平面粒子系统</button>
+  <!-- <div id="container"></div> -->
   </div>
 </template>
 
@@ -20,29 +20,29 @@ export default {
   },
   methods: {
     init: function () {
-      let container = document.getElementById('container')
+      // let container = document.getElementById('container')
 
-      this.camera = new Three.PerspectiveCamera(70, container.clientWidth / container.clientHeight, 0.1, 1000) // 创建相机对象
-      this.camera.position.z = 1
+      // this.camera = new Three.PerspectiveCamera(70, container.clientWidth / container.clientHeight, 0.1, 1000) // 创建相机对象
+      // this.camera.position.z = 1
 
-      this.scene = new Three.Scene() // 创建场景
+      // this.scene = new Three.Scene() // 创建场景
 
-      // let geometry = new Three.BoxGeometry(0.2, 0.2, 0.2) // 创建盒模型
-      // let material = new Three.MeshNormalMaterial()
-      // this.mesh = new Three.Mesh(geometry, material)
+      // // let geometry = new Three.BoxGeometry(0.2, 0.2, 0.2) // 创建盒模型
+      // // let material = new Three.MeshNormalMaterial()
+      // // this.mesh = new Three.Mesh(geometry, material)
 
-      var axes = new Three.AxisHelper(20) // 创建x轴
-      this.scene.add(axes)
+      // var axes = new Three.AxisHelper(20) // 创建x轴
+      // this.scene.add(axes)
 
-      var planeGeometry = new Three.PlaneGeometry(60, 20) // 创建平面
-      var planeMaterial = new Three.MeshBasicMaterial({color: 0xcccccc})
+      // var planeGeometry = new Three.PlaneGeometry(60, 20) // 创建平面
+      // var planeMaterial = new Three.MeshBasicMaterial({color: 0xcccccc})
 
-      this.mesh = new Three.Mesh(planeGeometry, planeMaterial)
-      this.scene.add(this.mesh)
+      // this.mesh = new Three.Mesh(planeGeometry, planeMaterial)
+      // this.scene.add(this.mesh)
 
-      this.renderer = new Three.WebGLRenderer({antialias: true}) // 渲染器
-      this.renderer.setSize(container.clientWidth, container.clientHeight)
-      container.appendChild(this.renderer.domElement)
+      // this.renderer = new Three.WebGLRenderer({antialias: true}) // 渲染器
+      // this.renderer.setSize(container.clientWidth, container.clientHeight)
+      // container.appendChild(this.renderer.domElement)
     },
     animate: function () {
       requestAnimationFrame(this.animate)
@@ -58,8 +58,8 @@ export default {
     }
   },
   mounted () {
-    this.init()
-    this.animate()
+    // this.init()
+    // this.animate()
   }
 }
 </script>
